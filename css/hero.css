@@ -1,0 +1,47 @@
+/* =============== HERO SECTION =============== */
+.hero {
+  background: url('../images/hero-bg1.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  height: 550px;
+  overflow: hidden;
+  padding: 100px 20px;
+  position: relative;
+  text-align: center;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero::after {
+  background: rgba(0, 0, 0, 0.4);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+
+.hero-title-img {
+  display: block;
+  height: 360px;
+  margin: -150px auto 20px auto;
+  position: relative;
+  z-index: 2;
+}
+
+.explore-btn {
+  background: red;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+  color: white;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 50px auto 0 auto;
+  padding: 10px 24px;
+  position: relative;
+  z-index: 2;
+}
+
+.explore-btn:hover {
+  background: darkred;
+}
