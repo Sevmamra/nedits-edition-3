@@ -1,0 +1,31 @@
+/* =============== TESTIMONIALS SECTION =============== */
+.testimonial {
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  padding: 25px;
+  position: relative;
+}
+
+.testimonial-bar {
+  background: #7b0091;
+  border-radius: 2px;
+  height: 80%;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 4px;
+}
+
+.testimonial p {
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 10px;
+}
+
+.testimonial span {
+  color: #7b0091;
+  font-size: 15px;
+  font-weight: 600;
+}
