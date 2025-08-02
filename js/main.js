@@ -1,4 +1,5 @@
 // Import all components
+import { loadServices } from './components/load-services.js';
 import { initAnimations } from './lib/animations.js';
 import { initHero } from './components/hero.js';
 import { initServices } from './components/services.js';
@@ -15,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initPage();
   initAnimations();
   initHero();
+  await loadServices();
   initServices();
   initTestimonials();
   initTypewriter();
