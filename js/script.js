@@ -25,6 +25,17 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 });
 
+// Animate each part on scroll into view
+document.querySelectorAll('#about [data-anim]').forEach(el => {
+  const observer = new IntersectionObserver(entries => {
+    if (entries[0].isIntersecting) {
+      el.classList.add('visible');
+      observer.disconnect();
+    }
+  }, { threshold: 0.3 });
+  observer.observe(el);
+});
+
 // Hero slideshow random + overlay
 (function () {
     const hero = document.querySelector('.hero');
