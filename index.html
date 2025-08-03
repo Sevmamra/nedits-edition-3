@@ -1,37 +1,44 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Nedits Edition</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Nedits Edition - Your Creative Digital Partner offering design, development and marketing services">
+  <meta name="keywords" content="digital agency, web design, graphic design, video editing, web development">
+  
+  <title>Nedits Edition - Creative Digital Solutions</title>
 
-  <!-- Google Fonts -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <!-- Preconnect to external resources -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <!-- Google Fonts (optimized single request) -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Alegreya+Sans+SC:wght@400;700&family=Days+One&family=Neuton&family=ABeeZee&display=swap" rel="stylesheet">
 
   <!-- AOS Animation CSS -->
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css"/>
-
-  <!-- Custom CSS -->
-  <link rel="stylesheet" href="css/style.css"/>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css">
 
   <!-- Favicon -->
-  <link rel="icon" href="images/favicon.ico" type="image/x-icon"/>
-</head>
-<body>
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-  <!-- Header -->
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- Header Section -->
   <header data-aos="fade-down">
     <div class="header-container">
-      <img src="images/logo.png" alt="NEDITS Logo" class="logo"/>
-      <img src="images/header-title.png" alt="NEDITS Edition" class="header-title-img"/>
+      <img src="images/logo.png" alt="NEDITS Logo" class="logo" loading="lazy">
+      <img src="images/header-title.png" alt="NEDITS Edition" class="header-title-img" loading="lazy">
     </div>
     <p class="tagline">Your Creative Digital Partner</p>
   </header>
 
-  <!-- Navbar -->
-  <nav class="navbar">
+  <!-- Navigation -->
+  <nav class="navbar" aria-label="Main navigation">
     <ul class="nav-links container">
-      <li><a href="#home">Home</a></li>
+      <li><a href="#home" aria-current="page">Home</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#testimonials">Testimonials</a></li>
@@ -40,27 +47,28 @@
   </nav>
 
   <!-- Hero Section -->
-  <section class="hero" id="home">
+  <section class="hero" id="home" aria-labelledby="hero-heading">
     <div class="container">
       <div class="hero-overlay" data-aos="zoom-in-down">
-        <img src="images/hero-title.png" alt="Welcome to NEDITS Edition" class="hero-title-img"/>
+        <img src="images/hero-title.png" alt="Welcome to NEDITS Edition" class="hero-title-img" loading="lazy">
         <a href="#services" class="btn explore-btn">Explore Services</a>
       </div>
     </div>
   </section>
 
   <!-- Services Section -->
-  <section class="section" id="services">
+  <section class="section" id="services" aria-labelledby="services-heading">
     <div class="container">
-      <h2 data-aos="fade-up">Our Services</h2>
+      <h2 id="services-heading" data-aos="fade-up">Our Services</h2>
 
-  <div class="services-category">
-    <div class="category-header">
-      <img src="images/icon-creative.png" alt="Creative & Visual Services"/>
-      <h3>Creative & Visual Services</h3>
-    </div>
-    <div class="services-container">
-    <div class="services-carousel" data-carousel="creative">
+      <!-- Creative Services -->
+      <div class="services-category">
+        <div class="category-header">
+          <img src="images/icon-creative.png" alt="" aria-hidden="true">
+          <h3>Creative & Visual Services</h3>
+        </div>
+        <div class="services-container">
+          <div class="services-carousel" data-carousel="creative">
       <div class="service-card">
         <div class="card-content">
           <h4>Graphic Designing</h4>
@@ -113,13 +121,15 @@
   </div>
 </div>
 
-  <div class="services-category">
-    <div class="category-header">
-      <img src="images/icon-media.png" alt="Media & Content Services"/>
-      <h3>Media & Content Services</h3>
-    </div>
-    <div class="services-container">
-    <div class="services-carousel" data-carousel="media">
+
+      <!-- Media Services -->
+      <div class="services-category">
+        <div class="category-header">
+          <img src="images/icon-media.png" alt="" aria-hidden="true">
+          <h3>Media & Content Services</h3>
+        </div>
+        <div class="services-container">
+          <div class="services-carousel" data-carousel="media">
       <div class="service-card">
         <div class="card-content">
           <h4>Video Editing</h4>
@@ -153,14 +163,15 @@
     </div>
   </div>
 </div>
-  
-  <div class="services-category">
-    <div class="category-header">
-      <img src="images/icon-tech.png" alt="Tech & Development Services"/>
-      <h3>Tech & Development Services</h3>
-    </div>
-    <div class="services-container">
-    <div class="services-carousel" data-carousel="tech">
+
+      <!-- Tech Services -->
+      <div class="services-category">
+        <div class="category-header">
+          <img src="images/icon-tech.png" alt="" aria-hidden="true">
+          <h3>Tech & Development Services</h3>
+        </div>
+        <div class="services-container">
+          <div class="services-carousel" data-carousel="tech">
       <div class="service-card">
         <div class="card-content">
           <h4>Website Development</h4>
@@ -207,13 +218,14 @@
   </div>
 </div>
 
-  <div class="services-category">
-    <div class="category-header">
-      <img src="images/icon-marketing.png" alt="Marketing & Growth Services"/>
-      <h3>Marketing & Growth Services</h3>
-    </div>
-    <div class="services-container">
-    <div class="services-carousel" data-carousel="marketing">
+      <!-- Marketing Services -->
+      <div class="services-category">
+        <div class="category-header">
+          <img src="images/icon-marketing.png" alt="" aria-hidden="true">
+          <h3>Marketing & Growth Services</h3>
+        </div>
+        <div class="services-container">
+          <div class="services-carousel" data-carousel="marketing">
       <div class="service-card">
         <div class="card-content">
           <h4>Digital Marketing</h4>
@@ -259,14 +271,16 @@
     </div>
   </div>
 </div>
-  
-  <div class="services-category">
-    <div class="category-header">
-      <img src="images/icon-content.png" alt="Content & Brand Setup"/>
-      <h3>Content & Brand Setup</h3>
-    </div>
-    <div class="services-container">
-    <div class="services-carousel" data-carousel="branding">
+
+      
+      <!-- Branding Services -->
+      <div class="services-category">
+        <div class="category-header">
+          <img src="images/icon-content.png" alt="" aria-hidden="true">
+          <h3>Content & Brand Setup</h3>
+        </div>
+        <div class="services-container">
+          <div class="services-carousel" data-carousel="branding">
       <div class="service-card">
         <div class="card-content">
           <h4>Brand Identity Creation</h4>
@@ -297,93 +311,105 @@
 </div>
 </section>
 
-
-  <!-- About Us Section -->
-  <section class="section" id="about">
+  <!-- About Section -->
+  <section class="section" id="about" aria-labelledby="about-heading">
     <div class="container about-wrapper">
-      <h2 class="section-title">About Us – <span>Nedits Edition</span></h2>
+      <h2 id="about-heading" class="section-title">About Us – <span>Nedits Edition</span></h2>
       <div class="about-animated-text">
-        <div class="about-part" data-anim="fade-down">
-          <p><strong>Nedits Edition</strong> isn’t just a service provider; it's a full-fledged digital creative studio built for the modern era.</p>
-        </div>
-        <div class="about-part" data-anim="fade-up">
-          <p>We help <strong>brands, creators, and businesses</strong> build their digital presence from scratch — from designing visuals and editing videos, to developing websites and automating workflows.</p>
-        </div>
-        <div class="about-part" data-anim="fade-left">
-          <blockquote>
-            <strong>Our goal is simple:</strong><br/>
-            Deliver creative, technical & marketing solutions that actually work and help you grow.
-          </blockquote>
-        </div>
-        <div class="about-part" data-anim="fade-right">
-          <p>Quality over quantity. Every project receives personal attention, fresh ideas, and strategic thinking.</p>
-        </div>
+        
+      <div class="about-part" data-anim="fade-down">
+        <p><strong>Nedits Edition</strong> isn’t just a service provider; it's a full-fledged digital creative studio built for the modern era.</p>
+      </div>
+      <div class="about-part" data-anim="fade-up">
+        <p>We help <strong>brands, creators, and businesses</strong> build their digital presence from scratch — from designing visuals and editing videos, to developing websites and automating workflows.</p>
+      </div>
+      <div class="about-part" data-anim="fade-left">
+        <blockquote>
+          <strong>Our goal is simple:</strong><br/>
+          Deliver creative, technical & marketing solutions that actually work and help you grow.
+        </blockquote>
+      </div>
+      <div class="about-part" data-anim="fade-right">
+        <p>Quality over quantity. Every project receives personal attention, fresh ideas, and strategic thinking.</p>
+      </div>
 
-        <div class="feature-card" data-anim="zoom-in">
-          <h3>🎨 All‑in‑One Studio</h3>
-          <p>Creative, tech, marketing—all delivered under one roof.</p>
-        </div>
-        <div class="feature-card" data-anim="zoom-in" style="animation-delay: 0.4s;">
-          <h3>🚀 Future‑Ready Skills</h3>
-          <p>AI, Web3, automation tools, and more—powered by innovation.</p>
-        </div>
+      <div class="feature-card" data-anim="zoom-in">
+        <h3>🎨 All‑in‑One Studio</h3>
+        <p>Creative, tech, marketing—all delivered under one roof.</p>
+      </div>
+      <div class="feature-card" data-anim="zoom-in" style="animation-delay: 0.4s;">
+        <h3>🚀 Future‑Ready Skills</h3>
+        <p>AI, Web3, automation tools, and more—powered by innovation.</p>
+      </div>
 
-        <div class="about-part" data-anim="fade-up" style="animation-delay: 0.8s;">
-          <p><strong>Vision:</strong> To empower creators and businesses through simple, creative & accessible digital growth.</p>
-        </div>
-        <div class="about-part" data-anim="fade-up" style="animation-delay: 1s;">
-          <p><strong>Mission:</strong> Deliver quality digital services with transparency, creativity & strategy—helping clients grow smarter.</p>
-        </div>
+      <div class="about-part" data-anim="fade-up" style="animation-delay: 0.8s;">
+        <p><strong>Vision:</strong> To empower creators and businesses through simple, creative & accessible digital growth.</p>
+      </div>
+      <div class="about-part" data-anim="fade-up" style="animation-delay: 1s;">
+        <p><strong>Mission:</strong> Deliver quality digital services with transparency, creativity & strategy—helping clients grow smarter.</p>
+      </div>
 
-        <div class="about-cta" data-anim="fade-up" style="animation-delay: 1.2s;">
-          <p>Let’s <strong>create something amazing together!</strong></p>
-        </div>
+      <div class="about-cta" data-anim="fade-up" style="animation-delay: 1.2s;">
+        <p>Let’s <strong>create something amazing together!</strong></p>
       </div>
     </div>
-  </section>
-
-  <!-- Skills + Journey + Achievements -->
-  <section class="section skills-orbit">
-    <h2 class="section-title">Skills</h2>
+  </div>
+</section>
+  <!-- Skills Section -->
+  <section class="section skills-orbit" aria-labelledby="skills-heading">
+    <h2 id="skills-heading" class="section-title">Skills</h2>
     <div class="orbit-container">
       <div class="center-sun">We</div>
-      <div class="orbit orbit-1"><div class="orbit-label">EDIT</div></div>
-      <div class="orbit orbit-2"><div class="orbit-label">DESIGN</div></div>
-      <div class="orbit orbit-3"><div class="orbit-label">DEVELOP</div></div>
-      <div class="orbit orbit-4"><div class="orbit-label">MANAGE</div></div>
+      <div class="orbit orbit-1">
+        <div class="orbit-label">EDIT</div>
+      </div>
+      <div class="orbit orbit-2">
+        <div class="orbit-label">DESIGN</div>
+      </div>
+      <div class="orbit orbit-3">
+        <div class="orbit-label">DEVELOP</div>
+      </div>
+      <div class="orbit orbit-4">
+        <div class="orbit-label">MANAGE</div>
+      </div>
     </div>
   </section>
 
-  <section class="section" id="journey">
-    <h2 class="section-title">Our Journey</h2>
+  <!-- Journey Section -->
+  <section class="section" id="journey" aria-labelledby="journey-heading">
+    <h2 id="journey-heading" class="section-title">Our Journey</h2>
     <div class="timeline">
       <div class="vertical-line"></div>
-      <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h4>2020 – Launch</h4>
-          <p>Started with graphics & video services.</p>
-        </div>
-      </div>
-      <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h4>2022 – Expansion</h4>
-          <p>Added websites, apps & brand services.</p>
-        </div>
-      </div>
-      <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
-        <div class="timeline-dot"></div>
-        <div class="timeline-content">
-          <h4>2025 – Global Reach</h4>
-          <p>Serving clients globally with premium services.</p>
-        </div>
+      
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="200">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h4>2020 – Launch</h4>
+        <p>Started with graphics & video services.</p>
       </div>
     </div>
-  </section>
 
-  <section class="section" id="achievements">
-    <h2 class="section-title">Our Achievements</h2>
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="400">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h4>2022 – Expansion</h4>
+        <p>Added websites, apps & brand services.</p>
+      </div>
+    </div>
+
+    <div class="timeline-item" data-aos="fade-up" data-aos-delay="600">
+      <div class="timeline-dot"></div>
+      <div class="timeline-content">
+        <h4>2025 – Global Reach</h4>
+        <p>Serving clients globally with premium services.</p>
+      </div>
+    </div>
+  </div>
+</section>
+  
+  <!-- Achievements Section -->
+  <section class="section" id="achievements" aria-labelledby="achievements-heading">
+    <h2 id="achievements-heading" class="section-title">Our Achievements</h2>
     <div class="counters-container">
       <div class="counter"><h3 id="clientsCounter">0</h3><p>Happy Clients</p></div>
       <div class="counter"><h3 id="projectsCounter">0</h3><p>Projects Completed</p></div>
@@ -392,36 +418,36 @@
   </section>
 
   <!-- Testimonials Section -->
-  <section class="section" id="testimonials">
+  <section class="section" id="testimonials" aria-labelledby="testimonials-heading">
     <div class="container">
-      <h2 data-aos="fade-up">What Our Clients Say</h2>
-      <div class="testimonial" data-aos="zoom-in">
-        <div class="testimonial-bar"></div>
-        <p>"Nedits Edition transformed my brand's Instagram game with stunning designs and timely deliveries!"</p>
-        <span>- Priya S., Social Media Influencer</span>
-      </div>
-      <div class="testimonial" data-aos="zoom-in" data-aos-delay="100">
-        <div class="testimonial-bar"></div>
-        <p>"Excellent website development service. Clean, responsive, and exactly as promised."</p>
-        <span>- Akash R., Startup Founder</span>
-      </div>
-      <div class="testimonial" data-aos="zoom-in" data-aos-delay="200">
-        <div class="testimonial-bar"></div>
-        <p>"Super professional video editing for my YouTube channel. Gained huge audience engagement!"</p>
-        <span>- Manav T., YouTube Creator</span>
-      </div>
+      <h2 id="testimonials-heading" data-aos="fade-up">What Our Clients Say</h2>
+    <div class="testimonial" data-aos="zoom-in">
+      <div class="testimonial-bar"></div>
+      <p>"Nedits Edition transformed my brand's Instagram game with stunning designs and timely deliveries!"</p>
+      <span>- Priya S., Social Media Influencer</span>
     </div>
+    <div class="testimonial" data-aos="zoom-in" data-aos-delay="100">
+      <div class="testimonial-bar"></div>
+      <p>"Excellent website development service. Clean, responsive, and exactly as promised."</p>
+      <span>- Akash R., Startup Founder</span>
+    </div>
+    <div class="testimonial" data-aos="zoom-in" data-aos-delay="200">
+      <div class="testimonial-bar"></div>
+      <p>"Super professional video editing for my YouTube channel. Gained huge audience engagement!"</p>
+      <span>- Manav T., YouTube Creator</span>
+    </div>
+  </div>
   </section>
-
+  
   <!-- Contact Section -->
-  <section class="section" id="contact">
+  <section class="section" id="contact" aria-labelledby="contact-heading">
     <div class="container">
-      <h2 data-aos="fade-up">Contact Us</h2>
+      <h2 id="contact-heading" data-aos="fade-up">Contact Us</h2>
       <div class="contact-form" data-aos="fade-up">
-        <form>
-          <input type="text" placeholder="Your Name" required/>
-          <input type="email" placeholder="Your Email" required/>
-          <textarea rows="5" placeholder="Your Message"></textarea>
+        <form id="contactForm" aria-label="Contact form">
+          <input type="text" placeholder="Your Name" required aria-label="Your name">
+          <input type="email" placeholder="Your Email" required aria-label="Your email">
+          <textarea rows="5" placeholder="Your Message" required aria-label="Your message"></textarea>
           <button type="submit" class="btn contact-btn">Send Message</button>
         </form>
       </div>
@@ -429,24 +455,36 @@
   </section>
 
   <!-- Footer -->
-  <footer data-aos="fade-up">
+  <footer data-aos="fade-up" aria-label="Footer">
     <div class="container footer-flex">
       <div class="footer-links">
         <a href="#about">About</a>
-        <a href="#">Privacy Policy</a>
-        <a href="#">Terms of Service</a>
+        <a href="#" aria-label="Privacy policy">Privacy Policy</a>
+        <a href="#" aria-label="Terms of service">Terms of Service</a>
       </div>
       <div class="social-icons">
-        <a href="#" target="_blank">Instagram</a> |
-        <a href="#" target="_blank">Facebook</a> |
-        <a href="#" target="_blank">YouTube</a>
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a> |
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="Facebook">Facebook</a> |
+        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube">YouTube</a>
       </div>
     </div>
-    <p>&copy; 2025 NEDITS Edition. All rights reserved.</p>
+    <p>&copy; <span id="currentYear"></span> NEDITS Edition. All rights reserved.</p>
   </footer>
 
   <!-- Scripts -->
   <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
   <script src="js/script.js"></script>
+  
+  <script>
+    // Initialize AOS
+    AOS.init({
+      duration: 800,
+      easing: 'ease-in-out',
+      once: true
+    });
+
+    // Set current year in footer
+    document.getElementById('currentYear').textContent = new Date().getFullYear();
+  </script>
 </body>
 </html>
