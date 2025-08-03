@@ -258,3 +258,35 @@ if (timelineItems.length > 0) {
     fadeObserver.observe(item);
   });
 }
+
+function slowCounter(id, target, duration = 3000) {
+  const el = document.getElementById(id);
+  if (!el) return;
+
+  let count = 0;
+  const increment = target / (duration / 50);
+
+  const interval = setInterval(() => {
+    count += increment;
+    if (count >= target) {
+      el.textContent = target;
+      clearInterval(interval);
+    } else {
+      el.textContent = Math.floor(count);
+    }
+  }, 50);
+}
+
+// When achievements section visible
+const achSec = document.querySelector("#achievements");
+if (achSec) {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      slowCounter("clientsCounter", 150, 4000);
+      slowCounter("projectsCounter", 300, 5000);
+      slowCounter("experienceCounter", 5, 3000);
+      observer.disconnect();
+    }
+  }, { threshold: 0.4 });
+  observer.observe(achSec);
+}
