@@ -489,80 +489,69 @@ footer {
 
 .skills-orbit {
   text-align: center;
-  background: #fff;
-  color: #000;
   padding: 80px 20px;
+  background: #fff;
+}
+.skills-orbit .section-title {
+  color: #7b0091;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.orbit-wrapper {
+  position: relative;
+  width: 100%;
+  height: 360px;
 }
 
 .orbit-container {
-  position: relative;
-  width: 300px;
-  height: 300px;
-  margin: 0 auto;
+  position: absolute;
 }
+
+.orbit-a { top: 0; left: 50%; transform: translateX(-50%); }
+.orbit-b { top: 50px; left: 10%; }
+.orbit-c { bottom: 20px; right: 15%; }
+.orbit-d { top: 70px; right: 30%; }
 
 .center-sun {
   width: 70px;
   height: 70px;
-  background: #0ff;
-  color: #000;
+  background: #7b0091;
+  color: #fff;
   border-radius: 50%;
   line-height: 70px;
   text-align: center;
   font-weight: bold;
-  position: absolute;
-  top: 115px;
-  left: 115px;
-  box-shadow: 0 0 20px #0ff;
+  position: relative;
+  margin: 0 auto;
+  box-shadow: 0 0 15px #7b0091, 0 0 30px #7b0091;
+  z-index: 2;
 }
 
 .orbit {
-  position: absolute;
-  border: 1px dashed #0ff6;
+  position: relative;
+  border: 1px dashed #7b0091aa;
   border-radius: 50%;
-  animation: rotate 30s linear infinite;
+  animation: rotate 20s linear infinite;
 }
+
 .orbit span {
   position: absolute;
-  background: #0ff;
-  color: #000;
-  font-size: 0.8rem;
-  font-weight: 600;
-  padding: 4px 10px;
+  background: #7b0091;
+  color: #fff;
+  padding: 6px 12px;
   border-radius: 10px;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%);
+  font-weight: 600;
+  box-shadow: 0 0 8px #7b0091aa;
 }
 
-.orbit-1 {
-  width: 100px;
-  height: 100px;
-  top: 100px;
-  left: 100px;
-  animation-duration: 18s;
-}
-.orbit-2 {
-  width: 140px;
-  height: 140px;
-  top: 80px;
-  left: 80px;
-  animation-duration: 22s;
-}
-.orbit-3 {
-  width: 180px;
-  height: 180px;
-  top: 60px;
-  left: 60px;
-  animation-duration: 26s;
-}
-.orbit-4 {
-  width: 220px;
-  height: 220px;
-  top: 40px;
-  left: 40px;
-  animation-duration: 30s;
-}
+.orbit-1 { width: 120px; height: 120px; }
+.orbit-2 { width: 100px; height: 100px; }
+.orbit-3 { width: 140px; height: 140px; }
+.orbit-4 { width: 110px; height: 110px; }
 
 @keyframes rotate {
   0% { transform: rotate(0deg); }
@@ -571,49 +560,98 @@ footer {
 
 /* Timeline */
 #journey {
-  background: #f8f8f8;
+  padding: 80px 20px;
 }
-#journey .timeline {
+#journey .section-title {
+  color: #7b0091;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+.timeline {
+  position: relative;
   max-width: 800px;
   margin: 0 auto;
-  padding: 20px;
+  padding-left: 40px;
 }
-#journey .timeline-item {
-  border-left: 4px solid #0ff;
-  padding-left: 20px;
-  margin-bottom: 30px;
+.vertical-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #7b0091, transparent);
+  animation: growLine 2.5s ease-out forwards;
 }
-#journey .timeline-item h4 {
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+.timeline-item:nth-child(2) { animation-delay: 1s; }
+.timeline-item:nth-child(3) { animation-delay: 2s; }
+.timeline-item:nth-child(4) { animation-delay: 3s; }
+
+.timeline-dot {
+  position: absolute;
+  left: 14px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #7b0091;
+  border-radius: 50%;
+}
+.timeline-content {
+  margin-left: 40px;
+  background: #111;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #7b009188;
+}
+.timeline-content h4 {
   margin: 0;
-  color: #111;
+  color: #7b0091;
 }
-#journey .timeline-item p {
-  color: #555;
-  margin: 5px 0 0;
+
+/* Animation Keyframes */
+@keyframes growLine {
+  from { height: 0; }
+  to { height: 100%; }
+}
+@keyframes fadeIn {
+  to { opacity: 1; }
 }
 
 /* Counters */
 #achievements {
-  background: #fff;
+  padding: 80px 20px;
+}
+#achievements .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #7b0091;
 }
 .counters-container {
   display: flex;
-  justify-content: center;
-  gap: 40px;
   flex-wrap: wrap;
-  margin-top: 20px;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
 }
 .counter {
-  background: #f2f2f2;
+  flex: 1 1 200px;
+  max-width: 220px;
+  background: #f8f8f8;
   padding: 20px;
-  width: 160px;
   text-align: center;
   border-radius: 10px;
-  box-shadow: 0 0 8px #ccc;
+  box-shadow: 0 0 8px #7b009133;
 }
 .counter h3 {
   font-size: 2.2rem;
-  color: #0ff;
+  color: #7b0091;
 }
 .counter p {
   margin-top: 5px;
