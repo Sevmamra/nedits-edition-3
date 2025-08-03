@@ -91,29 +91,34 @@ header {
   }
 }
 
-/* ======================================
-   Navigation
-====================================== */
-nav {
-  background-color: #222;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 12px 0;
+/* ===========================
+   Navbar
+=========================== */
+.navbar {
+  background: #111;
   position: sticky;
   top: 0;
-  z-index: 100;
+  z-index: 999;
 }
 
-nav a {
-  color: #f2f2f2;
-  font-weight: 500;
+.nav-links {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 15px 0;
+  list-style: none;
+}
+
+.nav-links a {
+  color: #eee;
+  font-size: 15px;
+  font-weight: 600;
   text-decoration: none;
   transition: 0.3s;
 }
 
-nav a:hover {
-  color: #ee0979;
+.nav-links a:hover, .nav-links a.active {
+  color: #ffd700;
 }
 
 /* ======================================
