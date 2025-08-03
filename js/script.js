@@ -203,3 +203,58 @@ document.querySelectorAll('.nav-links a').forEach(link => {
         observer.observe(h2);
     });
 })();
+
+// Counter logic
+const counters = {
+  projectsCounter: 24,
+  linesCodeCounter: 95000,
+  coffeeCounter: 180,
+  aliensServed: 120
+};
+function animateCounters() {
+  Object.entries(counters).forEach(([id, target]) => {
+    const el = document.getElementById(id);
+    if (!el) return;
+    let count = 0;
+    const step = target / 100;
+    const interval = setInterval(() => {
+      count += step;
+      if (count >= target) {
+        el.textContent = target;
+        clearInterval(interval);
+      } else {
+        el.textContent = Math.floor(count);
+      }
+    }, 25);
+  });
+}
+
+// Animate counters when visible
+const counterSection = document.querySelector("#skills-journey-achievements");
+if (counterSection) {
+  const observer = new IntersectionObserver((entries) => {
+    if (entries[0].isIntersecting) {
+      animateCounters();
+      observer.disconnect();
+    }
+  }, { threshold: 0.4 });
+  observer.observe(counterSection);
+}
+
+// Optional: Fade-in timeline items
+const timelineItems = document.querySelectorAll('.timeline-item');
+if (timelineItems.length > 0) {
+  const fadeObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        fadeObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.2 });
+
+  timelineItems.forEach(item => {
+    item.classList.add('fade-in');
+    fadeObserver.observe(item);
+  });
+}
