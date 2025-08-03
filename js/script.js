@@ -259,34 +259,34 @@ if (timelineItems.length > 0) {
   });
 }
 
-function slowCounter(id, target, duration = 3000) {
+function slowCounter(id, target, duration = 4000) {
   const el = document.getElementById(id);
   if (!el) return;
 
   let count = 0;
-  const increment = target / (duration / 50);
+  const step = Math.ceil(target / (duration / 50));
 
   const interval = setInterval(() => {
-    count += increment;
+    count += step;
     if (count >= target) {
       el.textContent = target;
       clearInterval(interval);
     } else {
-      el.textContent = Math.floor(count);
+      el.textContent = count;
     }
   }, 50);
 }
 
-// When achievements section visible
-const achSec = document.querySelector("#achievements");
-if (achSec) {
+// Trigger when visible
+const achievements = document.getElementById("achievements");
+if (achievements) {
   const observer = new IntersectionObserver((entries) => {
     if (entries[0].isIntersecting) {
-      slowCounter("clientsCounter", 150, 4000);
-      slowCounter("projectsCounter", 300, 5000);
-      slowCounter("experienceCounter", 5, 3000);
+      slowCounter("clientsCounter", 150);
+      slowCounter("projectsCounter", 300);
+      slowCounter("experienceCounter", 5);
       observer.disconnect();
     }
-  }, { threshold: 0.4 });
-  observer.observe(achSec);
+  }, { threshold: 0.3 });
+  observer.observe(achievements);
 }
