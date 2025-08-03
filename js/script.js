@@ -175,6 +175,17 @@ document.addEventListener('DOMContentLoaded', function () {
   });
 })();
 
+// ==================== Smooth Scroll for Navbar Links ====================
+document.querySelectorAll('.nav-links a').forEach(link => {
+  link.addEventListener('click', e => {
+    if (link.hash && document.querySelector(link.hash)) {
+      e.preventDefault();
+      document.querySelector(link.hash).scrollIntoView({ behavior: 'smooth' });
+    }
+  });
+});
+
+
 // Header Title Animation on Scroll (New!)
 (function () {
     const h2Titles = document.querySelectorAll('.section h2');
