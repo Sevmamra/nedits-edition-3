@@ -1,503 +1,483 @@
 /* ======================================
-   Global Reset & Body 
+   Global Reset & Body 
 ====================================== */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 body {
-  background: #f4f4f4;
-  color: #333;
-  font-family: 'Poppins', sans-serif;
-  scroll-behavior: smooth;
+  background: #f4f4f4;
+  color: #333;
+  font-family: 'Poppins', sans-serif;
+  scroll-behavior: smooth;
 }
 
 /* ======================================
-   Header (PC / Laptop / iPad)
+   Header (PC / Laptop / iPad)
 ====================================== */
 header {
-  background: linear-gradient(45deg, #ff6a00, #ee0979);
-  color: #fff;
-  line-height: 1;
-  padding: 0 10px;
-  text-align: center;
+  background: linear-gradient(45deg, #ff6a00, #ee0979);
+  color: #fff;
+  line-height: 1;
+  padding: 0 10px;
+  text-align: center;
 }
 
 .header-container {
-  align-items: flex-start;
-  display: flex;
-  gap: 5px;
-  justify-content: center;
-  padding: 2px 0;
-  position: relative;
+  align-items: flex-start;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 2px 0;
+  position: relative;
 }
 
 .logo {
-  height: 70px;
-  position: relative;
-  right: -13px;
-  top: 10px;
+  height: 70px;
+  position: relative;
+  right: -13px;
+  top: 10px;
 }
 
 .header-title-img {
-  height: 95px;
-  left: -3px;
-  position: relative;
-  top: -2px;
+  height: 95px;
+  left: -3px;
+  position: relative;
+  top: -2px;
 }
 
 .tagline {
-  font-size: 15px;
-  font-weight: 500;
-  letter-spacing: 0.5px;
-  margin-top: -5px;
-  position: relative;
-  top: -10px;
+  font-size: 15px;
+  font-weight: 500;
+  letter-spacing: 0.5px;
+  margin-top: -5px;
+  position: relative;
+  top: -10px;
 }
 
 /* ======================================
-   Header — Mobile (max-width: 767px)
+   Header — Mobile (max-width: 767px)
 ====================================== */
 @media (max-width: 767px) {
-  header {
-    padding: 10px;
-  }
+  header {
+    padding: 10px;
+  }
 
-  .header-container {
-    gap: 8px;
-    padding: 5px 0;
-  }
+  .header-container {
+    gap: 8px;
+    padding: 5px 0;
+  }
 
-  .logo {
-    height: 95px;
-    right: -10px;
-    top: 12px;
-  }
+  .logo {
+    height: 95px;
+    right: -10px;
+    top: 12px;
+  }
 
-  .header-title-img {
-    height: 125px;
-    left: 0;
-    top: -1px;
-  }
+  .header-title-img {
+    height: 125px;
+    left: 0;
+    top: -1px;
+  }
 
-  .tagline {
-    font-size: 18px;
-    font-weight: 600;
-    letter-spacing: 0.7px;
-    margin-top: -4px;
-    top: -8px;
-  }
+  .tagline {
+    font-size: 18px;
+    font-weight: 600;
+    letter-spacing: 0.7px;
+    margin-top: -4px;
+    top: -8px;
+  }
 }
 
 /* ======================================
-   Navigation
+   Navigation
 ====================================== */
 nav {
-  background-color: #222;
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  padding: 12px 0;
-  position: sticky;
-  top: 0;
-  z-index: 100;
+  background-color: #222;
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  padding: 12px 0;
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 nav a {
-  color: #f2f2f2;
-  font-weight: 500;
-  text-decoration: none;
-  transition: 0.3s;
+  color: #f2f2f2;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 nav a:hover {
-  color: #ee0979;
+  color: #ee0979;
 }
 
 /* ======================================
-   Hero Section
+   Hero Section
 ====================================== */
 .hero {
-  background: url('../images/hero-bg1.jpg') no-repeat center center;
-  background-size: cover;
-  color: #fff;
-  height: 550px;
-  overflow: hidden;
-  padding: 100px 20px;
-  position: relative;
-  text-align: center;
-  transition: background-image 1s ease-in-out;
+  background: url('../images/hero-bg1.jpg') no-repeat center center;
+  background-size: cover;
+  color: #fff;
+  height: 550px;
+  overflow: hidden;
+  padding: 100px 20px;
+  position: relative;
+  text-align: center;
+  transition: background-image 1s ease-in-out;
 }
 
-/* Ye CSS zaroori nahi hai kyunki JS mein gradient lag raha hai. Isko hata diya hai. */
-/* .hero-bg::after {
-  background: rgba(0, 0, 0, 0.4);
-  content: '';
-  height: 100%;
-  left: 0;
-  position: absolute;
-  top: 0;
-  width: 100%;
-} */
+.hero-bg::after {
+  background: rgba(0, 0, 0, 0.4);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
 
 .hero-title-img {
-  display: block;
-  height: 360px;
-  margin: -150px auto 20px auto;
+  display: block;
+  height: 360px;
+  margin: -150px auto 20px auto;
 }
 
 .explore-btn {
-  background: red;
-  border-radius: 50px;
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
-  color: white;
-  display: inline-block;
-  font-size: 22px;
-  font-weight: 600;
-  margin: 50px auto 0 auto;
-  padding: 10px 24px;
-  text-decoration: none;
-  transition: 0.3s;
+  background: red;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+  color: white;
+  display: inline-block;
+  font-size: 22px;
+  font-weight: 600;
+  margin: 50px auto 0 auto;
+  padding: 10px 24px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .explore-btn:hover {
-  background: darkred;
+  background: darkred;
 }
 
 /* ======================================
-   Section Headings
+   Section Headings
 ====================================== */
 .section {
-  margin: auto;
-  max-width: 1100px;
-  padding: 70px 20px;
+  margin: auto;
+  max-width: 1100px;
+  padding: 70px 20px;
 }
 
 /* ======================================
-   Section Headings
+   Section Headings
 ====================================== */
 .section h2 {
-  color: #333;
-  font-family: 'Days One', sans-serif;
-  font-size: 32px;
-  margin-bottom: 30px;
-  display: flex;
-  align-items: center;
+  color: #333;
+  font-family: 'Days One', sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
 }
 
 .section h2::before {
-  content: '';
-  width: 6px;
-  height: 40px;
-  background: #7b0091;
-  margin-right: 15px;
-  transform: scaleX(0); /* Animation ke liye */
-  transform-origin: left;
-  transition: transform 0.8s ease-out;
+  content: '';
+  width: 6px;
+  height: 40px;
+  background: #7b0091;
+  margin-right: 15px;
+  transform: scaleX(0); /* Animation ke liye */
+  transform-origin: left;
+  transition: transform 0.8s ease-out;
 }
 
 .section h2.aos-animate::before {
-  transform: scaleX(1);
+  transform: scaleX(1);
 }
 
 /* ======================================
-  New Services Section - Final Update (Updated CSS)
+  New Services Section - Final Update (Updated CSS)
 ====================================== */
-/* Naya CSS - Category Header */
-.services-section-wrapper {
-    padding: 0 0 50px 0; /* Top aur bottom padding set kiya */
-}
-
 .services-category {
-    margin: 0; /* Margin reset kiya */
+    margin-bottom: 50px;
 }
 
 .category-header {
-    background: linear-gradient(to right, #4D15CC, #7A0090); /* Naya gradient */
-    color: #fff;
-    padding: 15px 20px;
-    border-radius: 0; /* Full width ke liye border-radius remove kiya */
-    display: flex;
-    align-items: center;
-    justify-content: center; /* Text ko center mein laya */
-    gap: 15px; /* Icon aur text ke beech thoda space badhaya */
-    margin-bottom: 25px;
+    background: #222;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 25px;
 }
 
 .category-header img {
-    width: 40px; /* Icon ki size badhai */
-    height: 40px;
+    width: 30px;
+    height: 30px;
 }
 
 .category-header h3 {
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 32px; /* Font size badhaya */
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #fff;
-    margin: 0;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 28px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin: 0;
 }
 
-/* Isme media query bhi update karenge */
-@media (max-width: 767px) {
-    .category-header h3 {
-        font-size: 26px; /* Mobile ke liye font size adjust kiya */
-    }
-    .category-header img {
-        width: 35px;
-        height: 35px;
-    }
-}
-
-
-/* Naya CSS - Service Cards */
 .services-container {
-    max-width: 1100px;
-    margin: auto;
-    position: relative;
-    overflow: hidden;
-    height: 450px; /* Height thoda aur badhaya for better look */
+    position: relative;
+    overflow: hidden; /* Yeh important hai, taki half cards hide ho jaayein */
+    height: 400px; /* Card ki length badhane ke liye height badhai */
 }
 
 .services-carousel {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
-    will-change: transform;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    /* Transition yahan se hata di hai, ab cards par individually apply hogi */
+    will-change: transform;
 }
 
 .service-card {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 20px; /* Padding kam kiya */
-    text-align: center;
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-    cursor: pointer;
-    flex-shrink: 0;
-    width: 340px; /* Card width badhai */
-    min-height: 350px; /* Min-height adjust kiya */
-    position: absolute;
-    left: 50%;
-    top: 50%;
-    transform-origin: center;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 30px 20px;
+    text-align: center;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* All properties par transition */
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 320px; /* Base width for all cards */
+    height: auto;
+    min-height: 280px; /* Cards ki length badhane ke liye min-height use kiya, aur thoda aur badhaya */
+    position: absolute; /* Positioning ke liye absolute */
+    left: 50%; /* Center se position */
+    top: 50%;
+    transform-origin: center;
 }
 
 /* New CSS classes for positions */
 .service-card.left {
-    transform: translate(-150%, -50%) scale(0.7) rotateY(30deg);
-    opacity: 0.5;
-    z-index: 1;
+    transform: translate(-150%, -50%) scale(0.7) rotateY(30deg); /* Left card ko aur bahar dhakela, scale kiya aur rotate kiya */
+    opacity: 0.5; /* Opacity 50% rakhi */
+    z-index: 1;
 }
 
 .service-card.center {
-    transform: translate(-50%, -50%) scale(1.1);
-    opacity: 1;
-    z-index: 10;
+    transform: translate(-50%, -50%) scale(1.1); /* Center card ko bada kiya */
+    opacity: 1; /* Opacity 100% rakhi */
+    z-index: 10;
 }
 
 .service-card.right {
-    transform: translate(50%, -50%) scale(0.7) rotateY(-30deg);
-    opacity: 0.5;
-    z-index: 1;
+    transform: translate(50%, -50%) scale(0.7) rotateY(-30deg); /* Right card ko aur bahar dhakela, scale kiya aur rotate kiya */
+    opacity: 0.5; /* Opacity 0.5 rakhi */
+    z-index: 1;
 }
 
-/* On-click glow effect ko adjust kiya */
+/* On-click glow effect */
 .service-card.active {
-    box-shadow: 0 0 25px 5px #7b0091;
-    transform: translate(-50%, -50%) scale(1.15) translateY(-10px);
+    box-shadow: 0 0 25px 5px #7b0091;
+    transform: translate(-50%, -50%) scale(1.15) translateY(-5px); /* Glow ke saath thoda upar utha hua */
 }
 
 /* New classes for animation */
 .service-card.leaving-left {
-    transform: translate(-200%, -50%) scale(0.6) rotateY(45deg);
-    opacity: 0;
+    transform: translate(-200%, -50%) scale(0.6) rotateY(45deg); /* Left card ko fade out karne ke liye */
+    opacity: 0;
 }
 .service-card.entering-right {
-    transform: translate(150%, -50%) scale(0.6) rotateY(-45deg);
-    opacity: 0;
+    transform: translate(150%, -50%) scale(0.6) rotateY(-45deg); /* Right se naya card aayega */
+    opacity: 0;
 }
 
 /* Card content fonts as before */
 .card-content h4 {
-    font-family: 'Neuton', serif;
-    font-size: 26px; /* Font size badhaya */
-    font-weight: 400;
-    margin-bottom: 10px;
-    background: transparent; /* Background transparent kiya */
-    color: #333; /* Text color black kiya */
-    padding: 5px 10px;
+    font-family: 'Neuton', serif;
+    font-size: 24px;
+    font-weight: 400;
+    margin-bottom: 15px;
+    background: #333;
+    color: #fff;
+    padding: 5px 10px;
 }
 
 .card-content p {
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 @media (max-width: 767px) {
-    .services-container {
-        height: 380px;
-    }
-    .service-card {
-        width: 280px;
-        min-height: 250px;
-    }
-    /* Mobile par 3D effect adjust kiya */
-    .service-card.left {
-        transform: translate(-130%, -50%) scale(0.7);
-        z-index: 1;
-    }
-    .service-card.right {
-        transform: translate(30%, -50%) scale(0.7);
-        z-index: 1;
-    }
-    .service-card.center {
-        transform: translate(-50%, -50%) scale(1.1);
-    }
-    .category-header h3 {
-        font-size: 24px;
-    }
+    .services-container {
+        height: 380px;
+    }
+    .service-card {
+        width: 280px;
+        min-height: 250px;
+    }
+    /* Mobile par 3D effect adjust kiya */
+    .service-card.left {
+        transform: translate(-130%, -50%) scale(0.7);
+        z-index: 1;
+    }
+    .service-card.right {
+        transform: translate(30%, -50%) scale(0.7);
+        z-index: 1;
+    }
+    .service-card.center {
+        transform: translate(-50%, -50%) scale(1.1);
+    }
+    .category-header h3 {
+        font-size: 24px;
+    }
 }
 
 /* ======================================
-   About Us Section
+   About Us Section
 ====================================== */
 .about-box {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-  margin-top: 20px;
-  padding: 30px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  margin-top: 20px;
+  padding: 30px;
 }
 
 .about-box p {
-  color: #333;
-  font-size: 16px;
-  line-height: 1.8;
+  color: #333;
+  font-size: 16px;
+  line-height: 1.8;
 }
 
 /* ======================================
-   Testimonials Section
+   Testimonials Section
 ====================================== */
 .testimonial {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
-  margin-bottom: 20px;
-  padding: 25px;
-  position: relative;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 18px rgba(0, 0, 0, 0.08);
+  margin-bottom: 20px;
+  padding: 25px;
+  position: relative;
 }
 
 .testimonial-bar {
-  background: #7b0091;
-  border-radius: 2px;
-  height: 80%;
-  left: 0;
-  position: absolute;
-  top: 10px;
-  width: 4px;
+  background: #7b0091;
+  border-radius: 2px;
+  height: 80%;
+  left: 0;
+  position: absolute;
+  top: 10px;
+  width: 4px;
 }
 
 .testimonial p {
-  font-size: 16px;
-  font-style: italic;
-  margin-bottom: 10px;
+  font-size: 16px;
+  font-style: italic;
+  margin-bottom: 10px;
 }
 
 .testimonial span {
-  color: #7b0091;
-  font-size: 15px;
-  font-weight: 600;
+  color: #7b0091;
+  font-size: 15px;
+  font-weight: 600;
 }
 
 /* ======================================
-   Contact Form Section
+   Contact Form Section
 ====================================== */
 .contact-form {
-  background: #fff;
-  border-radius: 14px;
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
-  margin-top: 20px;
-  padding: 35px;
+  background: #fff;
+  border-radius: 14px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
+  padding: 35px;
 }
 
 form input,
 form textarea {
-  border: 1px solid #ccc;
-  border-radius: 8px;
-  font-size: 15px;
-  margin: 12px 0;
-  padding: 14px;
-  width: 100%;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+  margin: 12px 0;
+  padding: 14px;
+  width: 100%;
 }
 
 .contact-btn {
-  background: linear-gradient(45deg, #ff0080, #7928ca);
-  border: none;
-  border-radius: 50px;
-  color: white;
-  cursor: pointer;
-  display: inline-block;
-  padding: 14px 28px;
-  transition: 0.3s;
+  background: linear-gradient(45deg, #ff0080, #7928ca);
+  border: none;
+  border-radius: 50px;
+  color: white;
+  cursor: pointer;
+  display: inline-block;
+  padding: 14px 28px;
+  transition: 0.3s;
 }
 
 .contact-btn:hover {
-  box-shadow: 0 0 20px #910091;
+  box-shadow: 0 0 20px #910091;
 }
 
 /* ======================================
-   Footer Section
+   Footer Section
 ====================================== */
 footer {
-  background: #222;
-  color: #f2f2f2;
-  font-size: 14px;
-  margin-top: 50px;
-  padding: 18px;
-  text-align: center;
+  background: #222;
+  color: #f2f2f2;
+  font-size: 14px;
+  margin-top: 50px;
+  padding: 18px;
+  text-align: center;
 }
 
 .footer-links {
-  margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .footer-links a {
-  color: #f2f2f2;
-  margin: 0 12px;
-  text-decoration: none;
-  transition: 0.3s;
+  color: #f2f2f2;
+  margin: 0 12px;
+  text-decoration: none;
+  transition: 0.3s;
 }
 
 .footer-links a:hover {
-  color: #ee0979;
+  color: #ee0979;
 }
 
 .social-icons a {
-  color: #f2f2f2;
-  margin: 0 8px;
-  text-decoration: none;
+  color: #f2f2f2;
+  margin: 0 8px;
+  text-decoration: none;
 }
 
 .social-icons a:hover {
-  color: #ee0979;
+  color: #ee0979;
 }
 
 /* ======================================
-   AOS Animations Defaults
+   AOS Animations Defaults
 ====================================== */
 [data-aos] {
-  opacity: 0;
-  transition-property: transform, opacity;
+  opacity: 0;
+  transition-property: transform, opacity;
 }
 
 [data-aos].aos-animate {
-  opacity: 1;
+  opacity: 1;
 }
