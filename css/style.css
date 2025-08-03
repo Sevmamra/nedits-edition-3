@@ -171,7 +171,6 @@ nav a:hover {
 .section {
   margin: auto;
   max-width: 1100px;
-  padding: 70px 20px;
 }
 
 /* ======================================
@@ -204,39 +203,60 @@ nav a:hover {
 /* ======================================
   New Services Section - Final Update (Updated CSS)
 ====================================== */
+/* Naya CSS - Category Header */
+.services-section-wrapper {
+    padding: 0 0 50px 0; /* Top aur bottom padding set kiya */
+}
+
 .services-category {
-    margin-bottom: 50px;
+    margin: 0; /* Margin reset kiya */
 }
 
 .category-header {
-    background: #222;
-    color: #fff;
-    padding: 10px 20px;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-    margin-bottom: 25px;
+    background: linear-gradient(to right, #4D15CC, #7A0090); /* Naya gradient */
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 0; /* Full width ke liye border-radius remove kiya */
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Text ko center mein laya */
+    gap: 15px; /* Icon aur text ke beech thoda space badhaya */
+    margin-bottom: 25px;
 }
 
 .category-header img {
-    width: 30px;
-    height: 30px;
+    width: 40px; /* Icon ki size badhai */
+    height: 40px;
 }
 
 .category-header h3 {
-    font-family: 'Alegreya Sans SC', sans-serif;
-    font-size: 28px;
-    font-weight: 700;
-    letter-spacing: 0.5px;
-    color: #fff;
-    margin: 0;
+    font-family: 'Alegreya Sans SC', sans-serif;
+    font-size: 32px; /* Font size badhaya */
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #fff;
+    margin: 0;
 }
 
+/* Isme media query bhi update karenge */
+@media (max-width: 767px) {
+    .category-header h3 {
+        font-size: 26px; /* Mobile ke liye font size adjust kiya */
+    }
+    .category-header img {
+        width: 35px;
+        height: 35px;
+    }
+}
+
+
+/* Naya CSS - Service Cards */
 .services-container {
-    position: relative;
-    overflow: hidden; /* Yeh important hai, taki half cards hide ho jaayein */
-    height: 400px; /* Card ki length badhane ke liye height badhai */
+    max-width: 1100px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    height: 450px; /* Height thoda aur badhaya for better look */
 }
 
 .services-carousel {
@@ -252,21 +272,20 @@ nav a:hover {
 }
 
 .service-card {
-    background: #fff;
-    border-radius: 14px;
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
-    padding: 30px 20px;
-    text-align: center;
-    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94); /* All properties par transition */
-    cursor: pointer;
-    flex-shrink: 0;
-    width: 320px; /* Base width for all cards */
-    height: auto;
-    min-height: 280px; /* Cards ki length badhane ke liye min-height use kiya, aur thoda aur badhaya */
-    position: absolute; /* Positioning ke liye absolute */
-    left: 50%; /* Center se position */
-    top: 50%;
-    transform-origin: center;
+    background: #fff;
+    border-radius: 14px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    padding: 20px; /* Padding kam kiya */
+    text-align: center;
+    transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+    cursor: pointer;
+    flex-shrink: 0;
+    width: 340px; /* Card width badhai */
+    min-height: 350px; /* Min-height adjust kiya */
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform-origin: center;
 }
 
 /* New CSS classes for positions */
@@ -288,10 +307,10 @@ nav a:hover {
     z-index: 1;
 }
 
-/* On-click glow effect */
+/* On-click glow effect ko adjust kiya */
 .service-card.active {
-    box-shadow: 0 0 25px 5px #7b0091;
-    transform: translate(-50%, -50%) scale(1.15) translateY(-5px); /* Glow ke saath thoda upar utha hua */
+    box-shadow: 0 0 25px 5px #7b0091;
+    transform: translate(-50%, -50%) scale(1.15) translateY(-10px);
 }
 
 /* New classes for animation */
@@ -306,19 +325,19 @@ nav a:hover {
 
 /* Card content fonts as before */
 .card-content h4 {
-    font-family: 'Neuton', serif;
-    font-size: 24px;
-    font-weight: 400;
-    margin-bottom: 15px;
-    background: #333;
-    color: #fff;
-    padding: 5px 10px;
+    font-family: 'Neuton', serif;
+    font-size: 26px; /* Font size badhaya */
+    font-weight: 400;
+    margin-bottom: 10px;
+    background: transparent; /* Background transparent kiya */
+    color: #333; /* Text color black kiya */
+    padding: 5px 10px;
 }
 
 .card-content p {
-    font-family: 'ABeeZee', sans-serif;
-    font-size: 16px;
-    line-height: 1.6;
+    font-family: 'ABeeZee', sans-serif;
+    font-size: 16px;
+    line-height: 1.6;
 }
 
 @media (max-width: 767px) {
