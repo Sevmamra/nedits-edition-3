@@ -489,135 +489,133 @@ footer {
 
 .skills-orbit {
   text-align: center;
+  background: #fff;
+  color: #000;
   padding: 80px 20px;
-  background: radial-gradient(ellipse at center, #000 30%, #111);
-  color: #fff;
-}
-.skills-orbit .section-title {
-  font-size: 2rem;
-  margin-bottom: 40px;
-  color: #00fbe4;
-  text-shadow: 0 0 10px #00fbe4, 0 0 20px #00fbe4;
 }
 
 .orbit-container {
   position: relative;
-  width: 320px;
-  height: 320px;
-  margin: 0 auto 80px;
+  width: 300px;
+  height: 300px;
+  margin: 0 auto;
 }
+
 .center-sun {
   width: 70px;
   height: 70px;
-  background: #00fbe4;
+  background: #0ff;
+  color: #000;
   border-radius: 50%;
   line-height: 70px;
   text-align: center;
   font-weight: bold;
   position: absolute;
-  top: 125px;
-  left: 125px;
-  color: #000;
-  box-shadow: 0 0 20px #00fbe4, 0 0 40px #00fbe4;
-  animation: pulseGlow 2s infinite;
+  top: 115px;
+  left: 115px;
+  box-shadow: 0 0 20px #0ff;
 }
+
 .orbit {
   position: absolute;
-  border: 1px dotted #00fbe455;
+  border: 1px dashed #0ff6;
   border-radius: 50%;
-  animation: rotate 15s linear infinite;
+  animation: rotate 30s linear infinite;
 }
 .orbit span {
   position: absolute;
-  background: #00fbe4;
+  background: #0ff;
   color: #000;
-  font-weight: bold;
-  font-size: 0.9rem;
-  padding: 6px 10px;
-  border-radius: 20px;
-  box-shadow: 0 0 10px #00fbe4;
+  font-size: 0.8rem;
+  font-weight: 600;
+  padding: 4px 10px;
+  border-radius: 10px;
   top: 0;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%) rotate(0deg);
 }
 
-.orbit-1 { width: 100px; height: 100px; top: 110px; left: 110px; animation-duration: 10s; }
-.orbit-2 { width: 140px; height: 140px; top: 90px; left: 90px; animation-duration: 15s; }
-.orbit-3 { width: 180px; height: 180px; top: 70px; left: 70px; animation-duration: 20s; }
-.orbit-4 { width: 220px; height: 220px; top: 50px; left: 50px; animation-duration: 25s; }
+.orbit-1 {
+  width: 100px;
+  height: 100px;
+  top: 100px;
+  left: 100px;
+  animation-duration: 18s;
+}
+.orbit-2 {
+  width: 140px;
+  height: 140px;
+  top: 80px;
+  left: 80px;
+  animation-duration: 22s;
+}
+.orbit-3 {
+  width: 180px;
+  height: 180px;
+  top: 60px;
+  left: 60px;
+  animation-duration: 26s;
+}
+.orbit-4 {
+  width: 220px;
+  height: 220px;
+  top: 40px;
+  left: 40px;
+  animation-duration: 30s;
+}
 
 @keyframes rotate {
   0% { transform: rotate(0deg); }
   100% { transform: rotate(360deg); }
 }
-@keyframes pulseGlow {
-  0% { box-shadow: 0 0 20px #00fbe4, 0 0 40px #00fbe4; }
-  50% { box-shadow: 0 0 30px #00fbe4, 0 0 60px #00fbe4; }
-  100% { box-shadow: 0 0 20px #00fbe4, 0 0 40px #00fbe4; }
-}
 
 /* Timeline */
-.timeline {
+#journey {
+  background: #f8f8f8;
+}
+#journey .timeline {
   max-width: 800px;
-  margin: 40px auto;
-  position: relative;
-  padding-left: 40px;
+  margin: 0 auto;
+  padding: 20px;
 }
-.timeline::before {
-  content: '';
-  position: absolute;
-  left: 20px;
-  top: 0;
-  bottom: 0;
-  width: 4px;
-  background: #00fbe4;
+#journey .timeline-item {
+  border-left: 4px solid #0ff;
+  padding-left: 20px;
+  margin-bottom: 30px;
 }
-.timeline-item {
-  position: relative;
-  margin-bottom: 40px;
+#journey .timeline-item h4 {
+  margin: 0;
+  color: #111;
 }
-.timeline-dot {
-  position: absolute;
-  left: 13px;
-  top: 6px;
-  width: 14px;
-  height: 14px;
-  background: #00fbe4;
-  border-radius: 50%;
-}
-.timeline-content {
-  margin-left: 40px;
-  background: #111;
-  padding: 15px 20px;
-  border-radius: 8px;
-  box-shadow: 0 0 10px #00fbe433;
-}
-.timeline-content h4 {
-  margin-top: 0;
-  color: #00fbe4;
+#journey .timeline-item p {
+  color: #555;
+  margin: 5px 0 0;
 }
 
 /* Counters */
+#achievements {
+  background: #fff;
+}
 .counters-container {
   display: flex;
   justify-content: center;
   gap: 40px;
-  margin-top: 40px;
   flex-wrap: wrap;
+  margin-top: 20px;
 }
 .counter {
-  background: #111;
+  background: #f2f2f2;
   padding: 20px;
-  width: 180px;
+  width: 160px;
   text-align: center;
-  border-radius: 12px;
-  box-shadow: 0 0 10px #00fbe455;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #ccc;
 }
 .counter h3 {
-  font-size: 2.5rem;
-  color: #00fbe4;
+  font-size: 2.2rem;
+  color: #0ff;
 }
 .counter p {
-  margin: 5px 0 0;
-  color: #ccc;
+  margin-top: 5px;
+  font-weight: bold;
 }
