@@ -581,7 +581,7 @@ footer {
 }
 
 .skills-orbit .section-title {
-  color: #7b0091;
+  color: #333;
   font-size: 2.2rem;
   margin-bottom: 40px;
 }
@@ -673,7 +673,7 @@ footer {
 }
 
 #journey .section-title {
-  color: #7b0091;
+  color: #333;
   text-align: center;
   font-size: 2.2rem;
   margin-bottom: 40px;
@@ -750,7 +750,7 @@ footer {
 #achievements .section-title {
   text-align: center;
   font-size: 2.2rem;
-  color: #7b0091;
+  color: #333;
 }
 
 .counters-container {
