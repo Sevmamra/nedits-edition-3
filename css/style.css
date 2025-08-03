@@ -492,70 +492,86 @@ footer {
   padding: 80px 20px;
   background: #fff;
 }
+
 .skills-orbit .section-title {
   color: #7b0091;
   font-size: 2.2rem;
   margin-bottom: 40px;
 }
 
-.orbit-wrapper {
-  position: relative;
-  width: 100%;
-  height: 360px;
-}
-
 .orbit-container {
-  position: absolute;
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
 }
-
-.orbit-a { top: 0; left: 50%; transform: translateX(-50%); }
-.orbit-b { top: 50px; left: 10%; }
-.orbit-c { bottom: 20px; right: 15%; }
-.orbit-d { top: 70px; right: 30%; }
 
 .center-sun {
-  width: 70px;
-  height: 70px;
+  width: 80px;
+  height: 80px;
   background: #7b0091;
   color: #fff;
   border-radius: 50%;
-  line-height: 70px;
+  line-height: 80px;
   text-align: center;
   font-weight: bold;
-  position: relative;
-  margin: 0 auto;
-  box-shadow: 0 0 15px #7b0091, 0 0 30px #7b0091;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 25px #7b0091, 0 0 60px #7b0091;
   z-index: 2;
 }
 
+/* Common Orbit Ring Style */
 .orbit {
-  position: relative;
-  border: 1px dashed #7b0091aa;
-  border-radius: 50%;
-  animation: rotate 20s linear infinite;
-}
-
-.orbit span {
   position: absolute;
-  background: #7b0091;
-  color: #fff;
-  padding: 6px 12px;
-  border-radius: 10px;
-  top: 0;
+  top: 50%;
   left: 50%;
+  border: 1px dashed #7b009199;
+  border-radius: 50%;
   transform: translate(-50%, -50%);
-  font-weight: 600;
-  box-shadow: 0 0 8px #7b0091aa;
+  animation: rotate linear infinite;
 }
-
-.orbit-1 { width: 120px; height: 120px; }
-.orbit-2 { width: 100px; height: 100px; }
-.orbit-3 { width: 140px; height: 140px; }
-.orbit-4 { width: 110px; height: 110px; }
+.orbit-1 {
+  width: 100px;
+  height: 100px;
+  animation-duration: 6s;
+}
+.orbit-2 {
+  width: 160px;
+  height: 160px;
+  animation-duration: 8s;
+}
+.orbit-3 {
+  width: 220px;
+  height: 220px;
+  animation-duration: 10s;
+}
+.orbit-4 {
+  width: 280px;
+  height: 280px;
+  animation-duration: 12s;
+}
 
 @keyframes rotate {
-  0% { transform: rotate(0deg); }
-  100% { transform: rotate(360deg); }
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Orbit Labels */
+.orbit-label {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #7b0091;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  box-shadow: 0 0 8px #7b009199;
 }
 
 /* Timeline */
