@@ -1,5 +1,5 @@
 /* ======================================
-   Base Reset & Body
+   Global Reset & Body 
 ====================================== */
 * {
   margin: 0;
@@ -12,49 +12,38 @@ body {
   color: #333;
   font-family: 'Poppins', sans-serif;
   scroll-behavior: smooth;
-  line-height: 1.6;
 }
 
 /* ======================================
-   Typography Utilities
-====================================== */
-.section-title {
-  font-size: 2.2rem;
-  text-align: center;
-  margin-bottom: 40px;
-  color: #7b0091;
-}
-
-.section-title span {
-  color: #7b0091;
-}
-
-/* ======================================
-   Header
+   Header Styles
 ====================================== */
 header {
   background: linear-gradient(45deg, #ff6a00, #ee0979);
   color: #fff;
+  line-height: 1;
+  padding: 0 10px;
   text-align: center;
-  padding: 10px;
 }
 
 .header-container {
-  display: flex;
-  justify-content: center;
   align-items: flex-start;
-  gap: 10px;
-  padding: 5px 0;
+  display: flex;
+  gap: 5px;
+  justify-content: center;
+  padding: 2px 0;
+  position: relative;
 }
 
 .logo {
   height: 70px;
   position: relative;
+  right: -13px;
   top: 10px;
 }
 
 .header-title-img {
   height: 95px;
+  left: -3px;
   position: relative;
   top: -2px;
 }
@@ -68,21 +57,40 @@ header {
   top: -10px;
 }
 
+/* Header Mobile Styles */
 @media (max-width: 767px) {
+  header {
+    padding: 10px;
+  }
+
+  .header-container {
+    gap: 8px;
+    padding: 5px 0;
+  }
+
   .logo {
     height: 95px;
+    right: -10px;
+    top: 12px;
   }
+
   .header-title-img {
     height: 125px;
+    left: 0;
+    top: -1px;
   }
+
   .tagline {
     font-size: 18px;
     font-weight: 600;
+    letter-spacing: 0.7px;
+    margin-top: -4px;
+    top: -8px;
   }
 }
 
 /* ======================================
-   Navbar
+   Navbar Styles
 ====================================== */
 .navbar {
   background: #111;
@@ -107,7 +115,7 @@ header {
   transition: 0.3s;
 }
 
-.nav-links a:hover,
+.nav-links a:hover, 
 .nav-links a.active {
   color: #ffd700;
 }
@@ -116,31 +124,45 @@ header {
    Hero Section
 ====================================== */
 .hero {
-  background: url('../images/hero-bg1.jpg') center center/cover no-repeat;
+  background: url('../images/hero-bg1.jpg') no-repeat center center;
+  background-size: cover;
   color: #fff;
   height: 550px;
+  overflow: hidden;
+  padding: 100px 20px;
   position: relative;
   text-align: center;
-  padding: 100px 20px;
+  transition: background-image 1s ease-in-out;
+}
+
+.hero-bg::after {
+  background: rgba(0, 0, 0, 0.4);
+  content: '';
+  height: 100%;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 100%;
 }
 
 .hero-title-img {
-  height: 360px;
-  margin: -150px auto 20px;
   display: block;
+  height: 360px;
+  margin: -150px auto 20px auto;
 }
 
 .explore-btn {
   background: red;
-  color: #fff;
+  border-radius: 50px;
+  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
+  color: white;
+  display: inline-block;
   font-size: 22px;
   font-weight: 600;
+  margin: 50px auto 0 auto;
   padding: 10px 24px;
-  border-radius: 50px;
   text-decoration: none;
-  margin-top: 50px;
-  box-shadow: 0 4px 12px rgba(255, 0, 0, 0.4);
-  transition: background 0.3s;
+  transition: 0.3s;
 }
 
 .explore-btn:hover {
@@ -148,12 +170,36 @@ header {
 }
 
 /* ======================================
-   Sections General
+   Section Styles
 ====================================== */
 .section {
-  max-width: 1100px;
   margin: auto;
+  max-width: 1100px;
   padding: 70px 20px;
+}
+
+.section h2 {
+  color: #333;
+  font-family: 'Days One', sans-serif;
+  font-size: 32px;
+  margin-bottom: 30px;
+  display: flex;
+  align-items: center;
+}
+
+.section h2::before {
+  content: '';
+  width: 6px;
+  height: 40px;
+  background: #7b0091;
+  margin-right: 15px;
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: transform 0.8s ease-out;
+}
+
+.section h2.aos-animate::before {
+  transform: scaleX(1);
 }
 
 /* ======================================
@@ -171,6 +217,7 @@ header {
   display: flex;
   align-items: center;
   gap: 10px;
+  margin-bottom: 25px;
 }
 
 .category-header img {
@@ -179,8 +226,12 @@ header {
 }
 
 .category-header h3 {
-  font-size: 28px;
   font-family: 'Alegreya Sans SC', sans-serif;
+  font-size: 28px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: #fff;
+  margin: 0;
 }
 
 .services-container {
@@ -191,10 +242,13 @@ header {
 
 .services-carousel {
   display: flex;
+  justify-content: center;
+  align-items: center;
   position: absolute;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
+  will-change: transform;
 }
 
 .service-card {
@@ -204,14 +258,55 @@ header {
   padding: 30px 20px;
   text-align: center;
   transition: all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  cursor: pointer;
+  flex-shrink: 0;
   width: 320px;
+  height: auto;
   min-height: 280px;
   position: absolute;
   left: 50%;
   top: 50%;
+  transform-origin: center;
 }
 
-.service-card h4 {
+/* Service Card Positions */
+.service-card.left {
+  transform: translate(-150%, -50%) scale(0.7) rotateY(30deg);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+.service-card.center {
+  transform: translate(-50%, -50%) scale(1.1);
+  opacity: 1;
+  z-index: 10;
+}
+
+.service-card.right {
+  transform: translate(50%, -50%) scale(0.7) rotateY(-30deg);
+  opacity: 0.5;
+  z-index: 1;
+}
+
+/* Active Card */
+.service-card.active {
+  box-shadow: 0 0 25px 5px #7b0091;
+  transform: translate(-50%, -50%) scale(1.15) translateY(-5px);
+}
+
+/* Animation Classes */
+.service-card.leaving-left {
+  transform: translate(-200%, -50%) scale(0.6) rotateY(45deg);
+  opacity: 0;
+}
+
+.service-card.entering-right {
+  transform: translate(150%, -50%) scale(0.6) rotateY(-45deg);
+  opacity: 0;
+}
+
+/* Card Content */
+.card-content h4 {
   font-family: 'Neuton', serif;
   font-size: 24px;
   font-weight: 400;
@@ -221,74 +316,78 @@ header {
   padding: 5px 10px;
 }
 
-.service-card p {
+.card-content p {
   font-family: 'ABeeZee', sans-serif;
   font-size: 16px;
   line-height: 1.6;
 }
 
-/* Card Positions */
-.service-card.left {
-  transform: translate(-150%, -50%) scale(0.7) rotateY(30deg);
-  opacity: 0.5;
-  z-index: 1;
-}
-.service-card.center {
-  transform: translate(-50%, -50%) scale(1.1);
-  opacity: 1;
-  z-index: 10;
-}
-.service-card.right {
-  transform: translate(50%, -50%) scale(0.7) rotateY(-30deg);
-  opacity: 0.5;
-  z-index: 1;
-}
-.service-card.active {
-  box-shadow: 0 0 25px 5px #7b0091;
-  transform: translate(-50%, -50%) scale(1.15) translateY(-5px);
-}
-
-/* Responsive */
+/* Mobile Services */
 @media (max-width: 767px) {
   .services-container {
     height: 380px;
   }
+  
   .service-card {
     width: 280px;
     min-height: 250px;
   }
+  
+  .service-card.left {
+    transform: translate(-130%, -50%) scale(0.7);
+    z-index: 1;
+  }
+  
+  .service-card.right {
+    transform: translate(30%, -50%) scale(0.7);
+    z-index: 1;
+  }
+  
+  .service-card.center {
+    transform: translate(-50%, -50%) scale(1.1);
+  }
+  
   .category-header h3 {
     font-size: 24px;
   }
 }
 
 /* ======================================
-   About Section
+   About Us Section
 ====================================== */
 #about {
   background: none;
   padding: 80px 20px;
   color: #111;
 }
+
 .about-wrapper {
   max-width: 900px;
-  margin: auto;
+  margin: 0 auto;
+}
+
+.section-title span {
+  color: #7b0091;
 }
 
 .about-animated-text {
   display: grid;
+  grid-template-columns: 1fr;
   gap: 24px;
 }
+
 .about-animated-text p {
   font-size: 1rem;
+  line-height: 1.8;
   color: #333;
 }
 
 blockquote {
   border-left: 4px solid #7b0091;
   padding-left: 16px;
-  background: #fafafa;
   font-style: italic;
+  background: #fafafa;
+  margin: 0;
 }
 
 .feature-card {
@@ -303,15 +402,10 @@ blockquote {
   margin-bottom: 10px;
   color: #7b0091;
 }
+
 .feature-card p {
   color: #555;
   font-size: 0.95rem;
-}
-
-@media(max-width: 768px) {
-  .feature-card {
-    max-width: 100%;
-  }
 }
 
 .about-cta p {
@@ -322,27 +416,44 @@ blockquote {
   margin-top: 30px;
 }
 
-/* Animations for [data-anim] */
+/* Animation Classes */
 [data-anim] {
   opacity: 0;
   transform: translateY(20px);
-  transition: 0.6s ease-out;
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
+
 [data-anim].visible {
   opacity: 1;
   transform: translateY(0);
 }
-[data-anim="fade-left"] { transform: translateX(-30px); }
-[data-anim="fade-right"] { transform: translateX(30px); }
+
+[data-anim="fade-left"] {
+  transform: translateX(-30px);
+}
+
+[data-anim="fade-right"] {
+  transform: translateX(30px);
+}
+
 [data-anim="zoom-in"] {
   transform: scale(0.8);
+  transition: transform 0.6s ease-out, opacity 0.6s ease-out;
 }
+
 [data-anim="zoom-in"].visible {
   transform: scale(1);
 }
 
+/* Mobile Feature Cards */
+@media(max-width: 768px) {
+  .feature-card {
+    max-width: 100%;
+  }
+}
+
 /* ======================================
-   Testimonials
+   Testimonials Section
 ====================================== */
 .testimonial {
   background: #fff;
@@ -376,32 +487,34 @@ blockquote {
 }
 
 /* ======================================
-   Contact Form
+   Contact Form Section
 ====================================== */
 .contact-form {
   background: #fff;
   border-radius: 14px;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  margin-top: 20px;
   padding: 35px;
 }
 
 form input,
 form textarea {
-  width: 100%;
-  padding: 14px;
-  margin: 12px 0;
-  font-size: 15px;
   border: 1px solid #ccc;
   border-radius: 8px;
+  font-size: 15px;
+  margin: 12px 0;
+  padding: 14px;
+  width: 100%;
 }
 
 .contact-btn {
   background: linear-gradient(45deg, #ff0080, #7928ca);
-  color: white;
-  padding: 14px 28px;
   border: none;
   border-radius: 50px;
+  color: white;
   cursor: pointer;
+  display: inline-block;
+  padding: 14px 28px;
   transition: 0.3s;
 }
 
@@ -410,29 +523,260 @@ form textarea {
 }
 
 /* ======================================
-   Footer
+   Footer Section
 ====================================== */
 footer {
   background: #222;
   color: #f2f2f2;
-  text-align: center;
-  padding: 18px;
   font-size: 14px;
+  margin-top: 50px;
+  padding: 18px;
+  text-align: center;
 }
 
 .footer-links {
   margin-bottom: 10px;
 }
 
-.footer-links a,
-.social-icons a {
+.footer-links a {
   color: #f2f2f2;
   margin: 0 12px;
   text-decoration: none;
   transition: 0.3s;
 }
 
-.footer-links a:hover,
+.footer-links a:hover {
+  color: #ee0979;
+}
+
+.social-icons a {
+  color: #f2f2f2;
+  margin: 0 8px;
+  text-decoration: none;
+}
+
 .social-icons a:hover {
   color: #ee0979;
+}
+
+/* ======================================
+   AOS Animations
+====================================== */
+[data-aos] {
+  opacity: 0;
+  transition-property: transform, opacity;
+}
+
+[data-aos].aos-animate {
+  opacity: 1;
+}
+
+/* ======================================
+   Skills Orbit Section
+====================================== */
+.skills-orbit {
+  text-align: center;
+  padding: 80px 20px;
+  background: #fff;
+}
+
+.skills-orbit .section-title {
+  color: #7b0091;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.orbit-container {
+  position: relative;
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.center-sun {
+  width: 80px;
+  height: 80px;
+  background: #7b0091;
+  color: #fff;
+  border-radius: 50%;
+  line-height: 80px;
+  text-align: center;
+  font-weight: bold;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  box-shadow: 0 0 25px #7b0091, 0 0 60px #7b0091;
+  z-index: 2;
+}
+
+/* Orbit Rings */
+.orbit {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  border: 1px dashed #7b009199;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+  animation: rotate linear infinite;
+}
+
+.orbit-1 {
+  width: 100px;
+  height: 100px;
+  animation-duration: 6s;
+}
+
+.orbit-2 {
+  width: 160px;
+  height: 160px;
+  animation-duration: 8s;
+}
+
+.orbit-3 {
+  width: 220px;
+  height: 220px;
+  animation-duration: 10s;
+}
+
+.orbit-4 {
+  width: 280px;
+  height: 280px;
+  animation-duration: 12s;
+}
+
+@keyframes rotate {
+  0% { transform: translate(-50%, -50%) rotate(0deg); }
+  100% { transform: translate(-50%, -50%) rotate(360deg); }
+}
+
+/* Orbit Labels */
+.orbit-label {
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #7b0091;
+  color: #fff;
+  padding: 6px 10px;
+  border-radius: 12px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  box-shadow: 0 0 8px #7b009199;
+}
+
+/* ======================================
+   Timeline Section
+====================================== */
+#journey {
+  padding: 80px 20px;
+}
+
+#journey .section-title {
+  color: #7b0091;
+  text-align: center;
+  font-size: 2.2rem;
+  margin-bottom: 40px;
+}
+
+.timeline {
+  position: relative;
+  max-width: 800px;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+.vertical-line {
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 4px;
+  background: linear-gradient(to bottom, #7b0091, transparent);
+  animation: growLine 2.5s ease-out forwards;
+}
+
+.timeline-item {
+  position: relative;
+  margin-bottom: 50px;
+  opacity: 0;
+  animation: fadeIn 0.5s ease forwards;
+}
+
+.timeline-item:nth-child(2) { animation-delay: 1s; }
+.timeline-item:nth-child(3) { animation-delay: 2s; }
+.timeline-item:nth-child(4) { animation-delay: 3s; }
+
+.timeline-dot {
+  position: absolute;
+  left: 14px;
+  top: 6px;
+  width: 14px;
+  height: 14px;
+  background: #7b0091;
+  border-radius: 50%;
+}
+
+.timeline-content {
+  margin-left: 40px;
+  background: #111;
+  color: #fff;
+  padding: 15px 20px;
+  border-radius: 6px;
+  box-shadow: 0 0 10px #7b009188;
+}
+
+.timeline-content h4 {
+  margin: 0;
+  color: #7b0091;
+}
+
+@keyframes growLine {
+  from { height: 0; }
+  to { height: 100%; }
+}
+
+@keyframes fadeIn {
+  to { opacity: 1; }
+}
+
+/* ======================================
+   Achievements Section
+====================================== */
+#achievements {
+  padding: 80px 20px;
+}
+
+#achievements .section-title {
+  text-align: center;
+  font-size: 2.2rem;
+  color: #7b0091;
+}
+
+.counters-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.counter {
+  flex: 1 1 200px;
+  max-width: 220px;
+  background: #f8f8f8;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 0 8px #7b009133;
+}
+
+.counter h3 {
+  font-size: 2.2rem;
+  color: #7b0091;
+}
+
+.counter p {
+  margin-top: 5px;
+  font-weight: bold;
 }
